@@ -8,14 +8,14 @@
 
 import UIKit
 
-class UIViewExt: UIView {
+extension UIView {
 
-    func present(){
+    func presentView(toView: UIView){
         let transition = CATransition()
         transition.duration = 0.3
         transition.type = CATransitionType.push
-        transition.subtype = CATransitionSubtype.fromLeft
-        self.window?.layer.add(transition, forKey: kCATransition)
+        transition.subtype = CATransitionSubtype.fromRight
+        self.layer.add(transition, forKey: kCATransition)
     }
 
 }
