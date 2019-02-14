@@ -10,7 +10,7 @@ import UIKit
 
 class textFieldExt: UITextField {
 
-    private var padding = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    private var padding = UIEdgeInsets(top: 0, left: 25, bottom: 0, right: 0)
     //textRectOffset = how far we want to shift the rectangle
     // padding = what should it look like on its rectangle itself?
     

@@ -14,6 +14,10 @@ class signInVC: UIViewController {
     @IBOutlet weak var password: textFieldExt!
     @IBOutlet weak var secondView: UIView!
     @IBOutlet weak var firstView: UIView!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var citySearchTextField: textFieldExt!
+    
     
     let data = ["New York, NY", "Los Angeles, CA", "Chicago, IL", "Houston, TX",
                 "Philadelphia, PA", "Phoenix, AZ", "San Diego, CA", "San Antonio, TX",
@@ -29,6 +33,12 @@ class signInVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.dataSource = self
+        tableView.delegate = self
+      
+        citySearchTextField.delegate = self
+//        citySearchTextfield.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        
         filteredData = data
         // Do any additional setup after loading the view.
     }
@@ -50,5 +60,28 @@ class signInVC: UIViewController {
         secondView.presentView(toView: uiview)
         
     }
+    
+}
+
+extension signInVC: UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "cityCell") as? CityCell {
+            let city = data[indexPath.row]
+            cell.cofigureCell(city: city)
+            return cell
+        }else{
+            return UITableViewCell()
+        }
+    }
+    
+    
+}
+
+extension signInVC: UITextFieldDelegate {
     
 }

@@ -228,50 +228,61 @@
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A27-5r-30E">
-                                <rect key="frame" x="10" y="370" width="355" height="270"/>
+                                <rect key="frame" x="10" y="70" width="355" height="270"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lcf-L9-SdC">
                                         <rect key="frame" x="10" y="50" width="335" height="210"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="kAM-oP-KN2">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cityCell" id="kAM-oP-KN2" customClass="CityCell" customModule="driversOnly" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="335" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kAM-oP-KN2" id="fyW-vm-tjk">
                                                     <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New York, NY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5u-43-JRY">
-                                                            <rect key="frame" x="15" y="12" width="105" height="21"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New York, NY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5u-43-JRY">
+                                                            <rect key="frame" x="16" y="12" width="200" height="23.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="200" id="cmz-ma-KBL"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="z5u-43-JRY" firstAttribute="leading" secondItem="fyW-vm-tjk" secondAttribute="leadingMargin" constant="1" id="qz4-9r-jjy"/>
+                                                        <constraint firstItem="z5u-43-JRY" firstAttribute="top" secondItem="fyW-vm-tjk" secondAttribute="topMargin" constant="1" id="rwk-EZ-Qyj"/>
+                                                    </constraints>
                                                 </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <outlet property="cityLbl" destination="z5u-43-JRY" id="INy-Fe-fsD"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
-                                    <searchBar contentMode="redraw" barStyle="black" placeholder="Please select your city..." translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCB-fp-08b">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type or select a city..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7rK-Mj-pqw" customClass="textFieldExt" customModule="driversOnly" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="355" height="50"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
-                                    </searchBar>
+                                    </textField>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="Lcf-L9-SdC" firstAttribute="top" secondItem="PCB-fp-08b" secondAttribute="bottom" id="9bB-oa-0Mu"/>
                                     <constraint firstAttribute="bottom" secondItem="Lcf-L9-SdC" secondAttribute="bottom" constant="10" id="DPV-bP-wS3"/>
+                                    <constraint firstItem="7rK-Mj-pqw" firstAttribute="leading" secondItem="A27-5r-30E" secondAttribute="leading" id="Iwb-aX-pLS"/>
+                                    <constraint firstItem="7rK-Mj-pqw" firstAttribute="top" secondItem="A27-5r-30E" secondAttribute="top" id="Sqy-NC-fnX"/>
+                                    <constraint firstItem="Lcf-L9-SdC" firstAttribute="top" secondItem="7rK-Mj-pqw" secondAttribute="bottom" id="XXt-PT-uvc"/>
                                     <constraint firstItem="Lcf-L9-SdC" firstAttribute="leading" secondItem="A27-5r-30E" secondAttribute="leading" constant="10" id="Xx1-aW-XwJ"/>
                                     <constraint firstAttribute="trailing" secondItem="Lcf-L9-SdC" secondAttribute="trailing" constant="10" id="YIg-d0-J4m"/>
                                     <constraint firstItem="Lcf-L9-SdC" firstAttribute="top" secondItem="A27-5r-30E" secondAttribute="top" constant="50" id="aao-hu-pWt"/>
-                                    <constraint firstItem="PCB-fp-08b" firstAttribute="top" secondItem="A27-5r-30E" secondAttribute="top" id="kdE-Yc-0Tc"/>
+                                    <constraint firstAttribute="trailing" secondItem="7rK-Mj-pqw" secondAttribute="trailing" id="kFu-Yn-oCb"/>
                                     <constraint firstAttribute="height" constant="270" id="thY-tf-aav"/>
-                                    <constraint firstAttribute="trailing" secondItem="PCB-fp-08b" secondAttribute="trailing" id="vOe-ls-bAH"/>
-                                    <constraint firstItem="PCB-fp-08b" firstAttribute="leading" secondItem="A27-5r-30E" secondAttribute="leading" id="wDy-EF-3b5"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -286,15 +297,17 @@
                             <constraint firstItem="X1c-Xn-Fz5" firstAttribute="top" secondItem="0bF-go-pV0" secondAttribute="bottom" constant="28" id="RMF-mb-Cg7"/>
                             <constraint firstItem="QXV-U5-teI" firstAttribute="leading" secondItem="EGx-QI-CPQ" secondAttribute="leading" constant="15" id="S2O-JJ-ZFC"/>
                             <constraint firstItem="0bF-go-pV0" firstAttribute="top" secondItem="QXV-U5-teI" secondAttribute="bottom" constant="25" id="TRn-aT-Z7c"/>
-                            <constraint firstItem="A27-5r-30E" firstAttribute="top" secondItem="EGx-QI-CPQ" secondAttribute="top" constant="350" id="kLm-O7-Wrt"/>
+                            <constraint firstItem="A27-5r-30E" firstAttribute="top" secondItem="EGx-QI-CPQ" secondAttribute="top" constant="50" id="kLm-O7-Wrt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EGx-QI-CPQ"/>
                     </view>
                     <connections>
+                        <outlet property="citySearchTextField" destination="7rK-Mj-pqw" id="bzh-06-7be"/>
                         <outlet property="email" destination="bW3-Ax-6df" id="AER-g5-0Wh"/>
                         <outlet property="firstView" destination="0bF-go-pV0" id="dUE-rF-7Qc"/>
                         <outlet property="password" destination="cMN-2R-kgA" id="1uf-17-Li3"/>
                         <outlet property="secondView" destination="A27-5r-30E" id="dCK-q6-UqD"/>
+                        <outlet property="tableView" destination="Lcf-L9-SdC" id="ecJ-bK-1fa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R0N-uG-fPN" userLabel="First Responder" sceneMemberID="firstResponder"/>

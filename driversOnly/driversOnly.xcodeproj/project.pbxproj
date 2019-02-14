@@ -25,6 +25,7 @@
 		A607642622154C7600124C75 /* BackButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A607642522154C7600124C75 /* BackButtonExt.swift */; };
 		A607642822154E6000124C75 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A607642722154E6000124C75 /* UIViewControllerExt.swift */; };
 		A607642A221560AB00124C75 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6076429221560AB00124C75 /* UIViewExt.swift */; };
+		A607642C2215DB1E00124C75 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A607642B2215DB1E00124C75 /* CityCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		A607642522154C7600124C75 /* BackButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonExt.swift; sourceTree = "<group>"; };
 		A607642722154E6000124C75 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		A6076429221560AB00124C75 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
+		A607642B2215DB1E00124C75 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
 		BA98E2FF95480B3D66F3D8D8 /* Pods-driversOnly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-driversOnly.release.xcconfig"; path = "Pods/Target Support Files/Pods-driversOnly/Pods-driversOnly.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				A60764162214A92600124C75 /* gradientView.swift */,
+				A607642B2215DB1E00124C75 /* CityCell.swift */,
 			);
 			path = VIews;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				A60764172214A92600124C75 /* gradientView.swift in Sources */,
 				A60763FE22149DA800124C75 /* FirstViewController.swift in Sources */,
 				A60764112214A49E00124C75 /* ButtonExt.swift in Sources */,
+				A607642C2215DB1E00124C75 /* CityCell.swift in Sources */,
 				A60764222215455400124C75 /* textFieldExt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
