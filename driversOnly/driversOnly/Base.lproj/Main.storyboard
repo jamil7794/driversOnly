@@ -95,37 +95,41 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZW-Fu-Idu">
                                 <rect key="frame" x="30" y="165" width="315" height="290"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="rQh-5g-HMN">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rQh-5g-HMN">
                                         <rect key="frame" x="10" y="10" width="295" height="270"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOf-Yu-4wC" customClass="ButtonExt" customModule="driversOnly" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="295" height="48"/>
-                                                <color key="backgroundColor" red="0.071738714249981753" green="0.28838358785606349" blue="0.65122884511947632" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="295" height="76.5"/>
+                                                <color key="backgroundColor" red="0.19473230956747922" green="0.22478661566510791" blue="0.85379864207379108" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <state key="normal" title="LOGIN WITH FB">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9b-zK-J0l" customClass="ButtonExt" customModule="driversOnly" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="93" width="295" height="47.5"/>
-                                                <color key="backgroundColor" red="0.071738714249981753" green="0.28838358785606349" blue="0.65122884511947632" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="0.0" y="96.5" width="295" height="77"/>
+                                                <color key="backgroundColor" red="0.85379864207379108" green="0.23601153298535466" blue="0.26925131337496311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <state key="normal" title="LOGIN WITH G+">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tkc-cQ-acw" customClass="ButtonExt" customModule="driversOnly" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="185.5" width="295" height="84.5"/>
-                                                <color key="backgroundColor" red="0.071738714249981753" green="0.28838358785606349" blue="0.65122884511947632" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="0.0" y="193.5" width="295" height="76.5"/>
+                                                <color key="backgroundColor" red="0.32686001062393188" green="0.18553620576858521" blue="0.65122884511947632" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <state key="normal" title="LOGIN WITH EMAIL">
+                                                <state key="normal" title="BY EMAIL">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="byEmailWasPressed:" destination="Mfp-kE-Glu" eventType="touchUpInside" id="w5r-KU-QA0"/>
+                                                    <segue destination="ZxQ-3l-OVs" kind="show" id="5Ej-zf-rqT"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.21189177040000001" green="0.22270396349999999" blue="0.26651787760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.59744967026031148" green="0.63357923871587485" blue="0.72282258087411178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="rQh-5g-HMN" secondAttribute="trailing" constant="10" id="Lyv-vD-cVH"/>
                                     <constraint firstItem="rQh-5g-HMN" firstAttribute="top" secondItem="fZW-Fu-Idu" secondAttribute="top" constant="10" id="OXf-hs-oT6"/>
@@ -140,7 +144,7 @@
                                     <constraint firstAttribute="height" constant="35" id="YRt-sy-gYc"/>
                                     <constraint firstAttribute="width" constant="150" id="f0v-AM-MBr"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -158,7 +162,76 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gr4-HD-sAJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1847.2" y="-0.44977511244377816"/>
+            <point key="canvasLocation" x="-2494" y="0.0"/>
+        </scene>
+        <!--Sign InVC-->
+        <scene sceneID="knS-Xr-S2L">
+            <objects>
+                <viewController storyboardIdentifier="signInVC" id="ZxQ-3l-OVs" customClass="signInVC" customModule="driversOnly" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FoD-rs-XcK" customClass="gradientView" customModule="driversOnly" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="TfZ-gT-hRh">
+                                <rect key="frame" x="102.5" y="78.5" width="170.5" height="310"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In With Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMG-L8-JOg">
+                                        <rect key="frame" x="0.0" y="0.0" width="170.5" height="40"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your email..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bW3-Ax-6df" customClass="textFieldExt" customModule="driversOnly" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="90" width="170.5" height="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your password..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cMN-2R-kgA" customClass="textFieldExt" customModule="driversOnly" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="180" width="170.5" height="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1c-Xn-Fz5" customClass="allBtnExtension" customModule="driversOnly" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="270" width="170.5" height="40"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                        <state key="normal" title="Next">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextWasPressed:" destination="ZxQ-3l-OVs" eventType="touchUpInside" id="wCi-RW-epF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXV-U5-teI" customClass="BackButtonExt" customModule="driversOnly" customModuleProvider="target">
+                                <rect key="frame" x="15" y="35" width="60" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="  Back" image="backIcon"/>
+                                <connections>
+                                    <action selector="backBtnWasPressed:" destination="ZxQ-3l-OVs" eventType="touchUpInside" id="XZg-25-Hek"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.41140449047088623" green="0.24080586433410645" blue="0.81441432237625122" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TfZ-gT-hRh" firstAttribute="centerY" secondItem="FoD-rs-XcK" secondAttribute="centerY" constant="-100" id="1v9-Dj-5bc"/>
+                            <constraint firstItem="TfZ-gT-hRh" firstAttribute="centerX" secondItem="FoD-rs-XcK" secondAttribute="centerX" id="C7e-wd-uBb"/>
+                            <constraint firstItem="QXV-U5-teI" firstAttribute="top" secondItem="EGx-QI-CPQ" secondAttribute="top" constant="15" id="MRS-3x-PUE"/>
+                            <constraint firstItem="QXV-U5-teI" firstAttribute="leading" secondItem="EGx-QI-CPQ" secondAttribute="leading" constant="15" id="S2O-JJ-ZFC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EGx-QI-CPQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="email" destination="bW3-Ax-6df" id="AER-g5-0Wh"/>
+                        <outlet property="password" destination="cMN-2R-kgA" id="1uf-17-Li3"/>
+                        <outlet property="userCredential" destination="TfZ-gT-hRh" id="HaQ-iI-S8a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R0N-uG-fPN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1594" y="0.0"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -180,6 +253,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backIcon" width="12" height="22"/>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>

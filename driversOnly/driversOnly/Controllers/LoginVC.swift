@@ -16,5 +16,9 @@ class LoginVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func byEmailWasPressed(_ sender: Any) {
+        let sigininVC = storyboard?.instantiateViewController(withIdentifier: "signInVC")
+        presentDetail(viewControllerToPresent: sigininVC!)
+    }
+    
 }
